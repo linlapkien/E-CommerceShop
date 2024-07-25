@@ -2,9 +2,14 @@
 const nextConfig = {
   images: {
     remotePatterns: [
+      // config the hostname while import image via cloud is problems
       {
         protocol: 'https',
         hostname: 'm.media-amazon.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
       },
     ],
   },

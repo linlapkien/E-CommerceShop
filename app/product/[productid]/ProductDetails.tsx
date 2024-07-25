@@ -89,11 +89,13 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-6">
+      {/* Images and list of color in the left hand side */}
       <ProductImage
         cartProduct={cartProduct}
         product={product}
         handleColorSelect={handleColorSelect}
       />
+      {/* The product details in the right hand side */}
       <div className="flex flex-col gap-1 text-slate-500 text-sm">
         <h2 className="text-3xl font-medium text-slate-700">{product.name}</h2>
         <div className="flex items-center gap-2">
@@ -115,6 +117,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
           {product.inStock ? 'In stock' : 'Out of stock'}
         </div>
         <Horizontal />
+        {/* Choose color and view it in the left hand side */}
         <SetColor
           cartProduct={cartProduct}
           images={product.images}
