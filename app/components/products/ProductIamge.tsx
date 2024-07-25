@@ -21,7 +21,7 @@ const ProductImage: React.FC<ProductImageProps> = ({
     <div className="grid grid-cols-6 gap-2 h-full max-h-[500px] min-h-[300px]">
       <div className="flex flex-col items-center justify-center gap-6 cursor-pointer border w-auto h-auto max-h-[500px] min-h-[300px] ">
         {product.images.map((image: SelectedImgType) => {
-          console.log(image);
+          //console.log(image);
           return (
             <div
               key={image.color}
