@@ -1,7 +1,6 @@
 'use client';
 
 import Heading from '@/app/components/Heading';
-import { product } from '../../../utils/product';
 import moment from 'moment';
 import { Rating } from '@mui/material';
 import Avatar from '../../components/Avatar';

@@ -1,6 +1,6 @@
 'use client';
 
-import { formatePrice } from '@/utils/formatPrice';
+import { formatPrice } from '@/utils/formatPrice';
 import Rating from '@mui/material/Rating';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -50,7 +50,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
         <div>{data.reviews.length} reviews</div>
 
         {/* price */}
-        <div className="font-semibold">{formatePrice(data.price)}</div>
+        <div className="font-semibold">{formatPrice(data.price)}</div>
       </div>
     </div>
   );
