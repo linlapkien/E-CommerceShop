@@ -1,5 +1,12 @@
 import { CartProductType } from '@/app/product/[productid]/ProductDetails';
-import { createContext, useCallback, useContext, useState } from 'react';
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
+import { toast } from 'react-hot-toast';
 
 // Context CartProductType that add to the Cart (storage)
 // 3 attribute
@@ -26,6 +33,18 @@ export const CartContextProvider = (props: Props) => {
     null
   );
 
+  // Persistent shopping cart session
+  useEffect(() => {
+    // cartItem = JSON string
+    // The key of localStorage must be the same at the below (which is key of localStorage)
+    const cartItem: any = localStorage.getItem('eShopCartItems');
+    // define cProducts type then pass JSON string (cartItem)
+    const cProducts: CartProductType[] | null = JSON.parse(cartItem);
+
+    // update cartProducts of state
+    setCartProducts(cProducts);
+  }, []);
+
   // handleAddProductToCart fucntion
   const handleAddProductToCart = useCallback((product: CartProductType) => {
     setCartProducts((prev) => {
@@ -37,6 +56,13 @@ export const CartContextProvider = (props: Props) => {
       } else {
         updateCart = [product];
       }
+
+      // Using toast to annouce when onClick 'addtoCart' button
+      toast.success('Product added to cart');
+
+      // When AddProductToCart, we updated 'eShopCartItems' to updateCart
+      // eShopCartItems is localStorage
+      localStorage.setItem('eShopCartItems', JSON.stringify(updateCart));
 
       // return the cart with product
       return updateCart;

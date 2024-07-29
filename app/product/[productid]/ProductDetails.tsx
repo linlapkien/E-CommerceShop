@@ -57,23 +57,25 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
     price: product.price,
   });
 
+  // Navigation
   const router = useRouter();
 
   // ConsoleLog data
-  console.log(cartProducts);
+  console.log(`test render flow: ${cartProduct.quantity}`);
+  // console.log(isProductInCart);
+  // console.log(cartProducts);
   //console.log(cartProduct.quantity);
 
   //
   useEffect(() => {
     setIsProductInCart(false);
-
+    console.log(cartProducts);
     // check this product is already in out cartProducts
     if (cartProducts) {
       // find id in cartProducts, if it doesnt find any, return existingIndex = -1
-      const existingIndex = cartProducts.findIndex((item) => {
-        item.id == product.id;
-      });
-
+      const existingIndex = cartProducts.findIndex(
+        (item) => item.id == product.id
+      );
       // if existingIndex ! -1, setCart has products
       if (existingIndex > -1) {
         setIsProductInCart(true);
@@ -146,6 +148,8 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
           {product.inStock ? 'In stock' : 'Out of stock'}
         </div>
         <Horizontal />
+
+        {/* If Cart has products, then user click button "Add to cart", then button will convert to "View Cart" button, which navigate to the Url/Cart */}
         {isProductInCart ? (
           <>
             <p className="mb-2 text-slate-500 flex items-center gap-1">

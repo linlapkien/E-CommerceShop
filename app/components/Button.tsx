@@ -24,6 +24,7 @@ const Button: React.FC<ButtonProps> = ({
   icon: Icon,
   onClick,
 }) => {
+  console.log('Button Add to Cart click');
   return (
     <button
       onClick={onClick}

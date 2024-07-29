@@ -9,13 +9,13 @@ interface SetQuantityProps {
   handleQtyDecrease: () => void;
 }
 
-const btnStyles = 'border-[1.2px] border-slate-300 px-2 rounded';
+const btnStyles = 'border-[3px] border-slate-300 px-2 rounded';
 
 const SetQuantity: React.FC<SetQuantityProps> = ({
-  cartProduct,
   cartCounter,
-  handleQtyDecrease,
+  cartProduct,
   handleQtyIncrease,
+  handleQtyDecrease,
 }) => {
   return (
     <div className="flex gap-8 items-center">
