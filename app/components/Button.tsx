@@ -24,12 +24,13 @@ const Button: React.FC<ButtonProps> = ({
   icon: Icon,
   onClick,
 }) => {
-  console.log('Button Add to Cart click');
+  console.log('Button click');
   return (
     <button
       onClick={onClick}
       disabled={disabled}
       className={`
+        my-4
     disabled:opacity-70
     disabled:cursor-not-allowed
     rounded-md
