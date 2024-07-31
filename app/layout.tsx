@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: 'Ecommerce app',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
