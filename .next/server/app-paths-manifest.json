@@ -1,5 +1,7 @@
 {
-  "/register/page": "app/register/page.js",
   "/cart/page": "app/cart/page.js",
-  "/login/page": "app/login/page.js"
+  "/page": "app/page.js",
+  "/product/[productId]/page": "app/product/[productId]/page.js",
+  "/checkout/page": "app/checkout/page.js",
+  "/admin/page": "app/admin/page.js"
 }
