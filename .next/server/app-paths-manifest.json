@@ -1,7 +1,4 @@
 {
-  "/checkout/page": "app/checkout/page.js",
-  "/cart/page": "app/cart/page.js",
-  "/page": "app/page.js",
-  "/admin/add-products/page": "app/admin/add-products/page.js",
-  "/admin/page": "app/admin/page.js"
+  "/api/product/route": "app/api/product/route.js",
+  "/admin/add-products/page": "app/admin/add-products/page.js"
 }

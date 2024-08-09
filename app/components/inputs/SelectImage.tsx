@@ -19,12 +19,30 @@ const SelectImage: React.FC<SelectedImageProps> = ({
   const onDrop = useCallback((acceptedFile: File[]) => {
     // Do sth with the files
 
-    if()
+    if (acceptedFile.length > 0) {
+      handleFileChange(acceptedFile[0]);
+    }
   }, []);
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop,
+    accept: { 'image/*': ['.jpeg', '.png'] },
+  });
 
-  return <div></div>;
+  return (
+    // Drag and drop the image file
+    <div
+      {...getRootProps()}
+      className="border-2 border-slate-400 p-2 border-dashed cursor-pointer text-sm font-normal flex text-slate-400 items-center justify-center"
+    >
+      <input {...getInputProps()} />
+      {isDragActive ? (
+        <p>Drop the image here ...</p>
+      ) : (
+        <p>+ {item?.color} Image</p>
+      )}
+    </div>
+  );
 };
 
 export default SelectImage;
