@@ -20,6 +20,8 @@ import { useRouter } from 'next/navigation';
 import { deleteObject, getStorage, ref } from 'firebase/storage';
 import firebaseApp from '@/libs/firebase';
 
+//-------------------------------------------------
+
 interface ManageProductsClientProps {
   products: Product;
 }
@@ -48,6 +50,7 @@ const ManageProductsClient: React.FC<ManageProductsClientProps> = ({
   const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 220 },
     { field: 'name', headerName: 'Name', width: 220 },
+    //-------------Price-----------------------
     {
       field: 'price',
       headerName: 'Price(USD)',
@@ -58,8 +61,10 @@ const ManageProductsClient: React.FC<ManageProductsClientProps> = ({
         );
       },
     },
+    //------------------------------------
     { field: 'category', headerName: 'Category', width: 100 },
     { field: 'brand', headerName: 'Brand', width: 100 },
+    //-------------inStock-----------------------
     {
       field: 'inStock',
       headerName: 'inStock',
@@ -86,6 +91,7 @@ const ManageProductsClient: React.FC<ManageProductsClientProps> = ({
         );
       },
     },
+    //-------------Action-----------------------
     {
       field: 'action',
       headerName: 'Actions',
@@ -116,11 +122,13 @@ const ManageProductsClient: React.FC<ManageProductsClientProps> = ({
         );
       },
     },
+    //------------------------------------------
   ];
 
+  //-------------------------------------------------
   // handle toggle inStock of product inStock<->outStock
   const handleToggleStock = useCallback((id: string, inStock: boolean) => {
-    // create PUT method in api/product/route
+    // create PUT API method in api/product/route
     axios
       .put('/api/product', {
         id,
@@ -136,6 +144,7 @@ const ManageProductsClient: React.FC<ManageProductsClientProps> = ({
       });
   }, []);
 
+  //-------------------------------------------------
   // handle Delete action button
   const handleDelete = useCallback(async (id: string, images: any[]) => {
     toast('Deleting product, please wait!');
@@ -173,6 +182,7 @@ const ManageProductsClient: React.FC<ManageProductsClientProps> = ({
         console.log(err);
       });
   }, []);
+  //-------------------------------------------------
 
   return (
     <div className="max-w-[1150px] m-auto text-xl">

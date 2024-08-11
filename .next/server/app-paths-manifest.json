@@ -1,5 +1,8 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/order/route": "app/api/order/route.js",
   "/product/[productId]/page": "app/product/[productId]/page.js",
-  "/admin/add-products/page": "app/admin/add-products/page.js",
-  "/admin/manage-products/page": "app/admin/manage-products/page.js"
+  "/admin/manage-orders/page": "app/admin/manage-orders/page.js",
+  "/admin/manage-products/page": "app/admin/manage-products/page.js",
+  "/admin/add-products/page": "app/admin/add-products/page.js"
 }
