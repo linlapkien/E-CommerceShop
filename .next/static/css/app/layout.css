@@ -603,6 +603,9 @@ video {
 .col-span-5 {
   grid-column: span 5 / span 5;
 }
+.m-auto {
+  margin: auto;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -655,6 +658,12 @@ video {
 .mt-8 {
   margin-top: 2rem;
 }
+.mt-2\.5 {
+  margin-top: 0.625rem;
+}
+.mt-3 {
+  margin-top: 0.75rem;
+}
 .flex {
   display: flex;
 }
@@ -696,6 +705,12 @@ video {
 }
 .h-screen {
   height: 100vh;
+}
+.h-\[30px\] {
+  height: 30px;
+}
+.h-0\.5 {
+  height: 0.125rem;
 }
 .max-h-\[150px\] {
   max-height: 150px;
@@ -755,6 +770,9 @@ video {
 .w-screen {
   width: 100vw;
 }
+.w-\[40px\] {
+  width: 40px;
+}
 .max-w-\[1920px\] {
   max-width: 1920px;
 }
@@ -766,6 +784,9 @@ video {
 }
 .max-w-\[650px\] {
   max-width: 650px;
+}
+.max-w-\[1150px\] {
+  max-width: 1150px;
 }
 .flex-grow {
   flex-grow: 1;
@@ -785,6 +806,9 @@ video {
 }
 .cursor-text {
   cursor: text;
+}
+.cursor-not-allowed {
+  cursor: not-allowed;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -978,6 +1002,14 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-teal-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 246 228 / var(--tw-bg-opacity));
+}
+.bg-rose-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 205 211 / var(--tw-bg-opacity));
+}
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -985,6 +1017,9 @@ video {
   --tw-gradient-from: #0ea5e9 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(14 165 233 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.to-80\% {
+  --tw-gradient-to-position: 80%;
 }
 .object-contain {
   -o-object-fit: contain;
@@ -998,6 +1033,12 @@ video {
 }
 .p-8 {
   padding: 2rem;
+}
+.p-5 {
+  padding: 1.25rem;
+}
+.p-1 {
+  padding: 0.25rem;
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -1026,6 +1067,14 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 .pb-12 {
   padding-bottom: 3rem;
@@ -1159,6 +1208,14 @@ video {
 .text-yellow-400 {
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity));
+}
+.text-teal-700 {
+  --tw-text-opacity: 1;
+  color: rgb(15 118 110 / var(--tw-text-opacity));
+}
+.text-rose-700 {
+  --tw-text-opacity: 1;
+  color: rgb(190 18 60 / var(--tw-text-opacity));
 }
 .underline {
   text-decoration-line: underline;
