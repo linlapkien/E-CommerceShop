@@ -5,10 +5,13 @@ export interface IProductParams {
   searchTerm?: string | null;
 }
 
+// getProducts is filter by category
 export default async function getProducts(params: IProductParams) {
   try {
     const { category, searchTerm } = params;
     let searchString = searchTerm;
+
+    console.log('1:', searchString);
 
     if (!searchTerm) {
       searchString = '';
