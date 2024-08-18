@@ -54,7 +54,7 @@ const CartClient: React.FC<CartClientProps> = ({ currentUser }) => {
           })}
       </div>
 
-      {/* Clear cart button and checkout */}
+      {/* -----Clear cart button and checkout------- */}
       <div className="border-t-[1.5px] border-slate-200 py-4 flex justify-between gap-4">
         <div className="w-[90px]">
           <Button

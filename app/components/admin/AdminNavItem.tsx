@@ -1,5 +1,4 @@
 import { IconType } from 'react-icons';
-import { Icon } from '@mui/material';
 
 interface AdminNavItemProps {
   selected?: boolean;

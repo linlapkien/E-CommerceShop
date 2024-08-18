@@ -30,7 +30,7 @@ interface Props {
   [propName: string]: any;
 }
 
-// Export CartProvider
+// ---------Export CartProvider-------------
 export const CartContextProvider = (props: Props) => {
   // define state cart Quantity
   const [cartTotalQty, setCartTotalQty] = useState(0);
@@ -62,6 +62,7 @@ export const CartContextProvider = (props: Props) => {
     setPaymentIntent(paymentIntent);
   }, []);
 
+  //---------------------------------------------
   // useEffect, calculate the total price in cart
   useEffect(() => {
     const getTotals = () => {
@@ -114,6 +115,7 @@ export const CartContextProvider = (props: Props) => {
     });
   }, []);
 
+  //----------------------------------------------
   //Function: remove existed product from cart
   const handleRemoveProductFromCart = useCallback(
     (product: CartProductType) => {
@@ -168,6 +170,7 @@ export const CartContextProvider = (props: Props) => {
     [cartProducts]
   );
 
+  //------------------------------------------------
   // Same as handleCartQtyIncrease function above
   const handleCartQtyDecrease = useCallback(
     (product: CartProductType) => {
@@ -198,6 +201,7 @@ export const CartContextProvider = (props: Props) => {
     [cartProducts]
   );
 
+  //----------------------------------------------
   // ClearCart function: set everything = null
   const handleClearCart = useCallback(() => {
     setCartProducts(null);
@@ -216,6 +220,7 @@ export const CartContextProvider = (props: Props) => {
     [paymentIntent]
   );
 
+  //-------------------------------------------
   // value is CartContext.Provider props
   const value = {
     cartTotalQty,
@@ -233,6 +238,7 @@ export const CartContextProvider = (props: Props) => {
   return <CartContext.Provider value={value} {...props} />;
 };
 
+//------------------------------------------------
 // Export the useCartContext
 export const useCart = () => {
   const context = useContext(CartContext);
@@ -243,3 +249,4 @@ export const useCart = () => {
 
   return context;
 };
+//------------------------------------------------
